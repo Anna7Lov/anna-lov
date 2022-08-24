@@ -1,3 +1,4 @@
-.text-blue {
+/* if we add a class to the third part of the text and style for it, the blue color will be applied. Without a class, the color remains red. */
+p {
     color: blue;
 }
