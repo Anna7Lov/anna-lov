@@ -1,0 +1,17 @@
+div {
+    background: red;
+    width: 100px;
+    height: 100px;
+}
+p {
+    background: blue;
+    width: 50%;
+    height: 50%;
+}
+P:first-child {
+    margin-left: 50%;
+    margin-bottom: 0;
+}
+p:nth-child(2) {
+    margin: 0;
+}
