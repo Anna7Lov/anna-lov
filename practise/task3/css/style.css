@@ -1,0 +1,23 @@
+.main {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    align-items: center;
+}
+div div {
+    border: 2px solid black; 
+    padding: 5px;   
+}
+div div:not(:last-child) {
+    margin-bottom: 40px;
+}
+.item1 {
+    align-self: flex-start;
+}
+.item3 {
+    align-self: stretch;
+}
+.item5 {
+    align-self: flex-end;
+}

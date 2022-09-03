@@ -1,0 +1,29 @@
+div {
+    color: white;
+}
+.red {
+    width: 30%; 
+    float: left;       
+}
+.bright-green {        
+    margin-left: 30%;
+}
+.blue {
+    float: right;
+    width: 25%;
+}
+.black {
+    margin-right: 25%;
+}
+.pink {
+    width: 30%;
+    float: right;    
+}
+.turquoise {
+    width: 30%;
+    float: left;
+}
+.yellow {
+    width: 40%;    
+    margin-left: 30%;
+}

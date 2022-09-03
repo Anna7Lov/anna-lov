@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+div {
+    border: 2px solid black;
+    float: left;
+    padding: 5px;
+}

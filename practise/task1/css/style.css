@@ -1,0 +1,30 @@
+div {
+    border: 2px solid black;
+    padding: 10px 0 10px 10px;    
+}
+div div {
+    margin-bottom: 10px;    
+    margin-right: 10px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 165px;
+    justify-content: flex-end;    
+}
+.item1 {
+    order: 2;
+}
+.item2 {
+    order: 5;
+}
+.item3 {
+    order: 3;
+}
+.item4 {
+    order: 4;
+}
+.item5 {
+    order: 1;
+}

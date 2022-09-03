@@ -1,0 +1,11 @@
+ul {
+    list-style-type: none;
+}
+.nested {
+    display: none;
+}
+.parent:hover .nested {
+    display: block;
+    background: red;
+    width: 30px;
+}

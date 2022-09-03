@@ -1,0 +1,15 @@
+.main {
+    border: 2px solid black;
+    display: flex;
+    align-items: flex-end;    
+    height: 150px;    
+}
+div div {
+    border: 1px solid black;    
+}
+.item2, .item4 {
+    align-self: center;
+}
+.item3 {
+    align-self: flex-start;
+}
