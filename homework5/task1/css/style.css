@@ -1,0 +1,25 @@
+.flex-container {
+    display: flex;
+}
+[class|='flex-item'] {
+    flex-basis: 180px;
+}
+
+@media screen and (max-width: 600px) {    
+    .flex-item-1,
+    .flex-item-2 {
+        flex-shrink: 3;
+    }
+}
+@media screen and (max-width: 500px) {   
+    .flex-item-1,
+    .flex-item-2 {
+        flex-shrink: 1;
+    }
+}
+@media screen and (max-width: 400px) {   
+    .flex-item-2,
+    .flex-item-4 {
+        flex-shrink: 1.5;
+    }
+}
