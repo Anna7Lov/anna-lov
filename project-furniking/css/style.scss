@@ -803,7 +803,11 @@ $white-color: #FFFFFF;
         text-decoration: none;
         font-weight: 400;
         font-size: 16px;
-        color: $text-color
+        color: $text-color;
+
+        &:hover {
+            color: $bright-color;
+        }
     }
 }
 
@@ -928,6 +932,87 @@ $white-color: #FFFFFF;
         height: 100%;
         width: 100%;
         position: absolute;
+    }
+}
+
+.filter {
+    display: flex;   
+    margin-bottom: 70px;  
+    flex-wrap: wrap;     
+
+    &__item {
+        width: 140px;
+        margin-right: 20px;
+    }
+
+    &__range-title {
+        display: flex;                   
+    }   
+
+    &__range-label {
+        margin-right: 10px;
+    }
+    
+}
+.label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    color: $main-color;    
+}
+
+#sofa-type, #sort {
+    width: 100%;
+    border: 1px solid $main-color;
+}
+
+#input-value {
+    display: block;
+    border: none;
+    background: none;
+    width: 60px;
+    font-weight: 600;
+    font-size: 18px;
+    color: $main-color; 
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+
+    &__item {                   
+        margin-right: 10px;        
+    }
+
+    &__link {
+        display: block;
+        width: 40px;
+        height: 40px;
+        padding: 10px 5px;  
+        border: 2px solid $main-color;   
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+        color: $main-color;   
+        text-align: center;     
+
+        &:hover {
+            background: $main-color;
+            color: $white-color;                       
+        }
+    }
+}
+
+.active-page {
+    background: $bright-color;
+    color: $white-color;
+
+    &:hover {
+        background: $bright-color;
     }
 }
 
@@ -1192,6 +1277,14 @@ $white-color: #FFFFFF;
 
     .form-questions {
         width: 100%;
+    }
+
+    .filter {
+        display: block;
+
+        &__item {
+            margin-bottom: 35px;
+        }
     }
 }
 

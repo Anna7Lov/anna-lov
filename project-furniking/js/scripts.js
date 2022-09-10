@@ -48,3 +48,7 @@ coffeeTablePointer.addEventListener('click', handleCoffeeTablePointerClick);
 function handleCoffeeTablePointerClick() {
   coffeeTableProduct.classList.toggle('active');
 }
+
+function updateTextInput(val) {
+  document.getElementById('input-value').value='$' + val; 
+}

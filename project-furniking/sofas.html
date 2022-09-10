@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniking online shop</title>
+    <title>Furniking Sofas category</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
         <div class="header__topmost-content">
             <div class="header__topmost-content-inner main-align">
                 <span class="header__greeting">Welcome to our online shop</span>
-                <a class="header__tel" href="tel:+49(187)5557799">+49 (187) 555 77 99</a>
+                <a class="header__tel" href="tel:+38(050)3901591">+49 (187) 555 77 99</a>
             </div>
         </div>
 
@@ -65,14 +65,14 @@
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="#"> About </a></li>
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="#"> Blog </a></li>
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="#"> Reviews </a></li>
-                        <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="contacts.html"> Contacts </a></li>
+                        <li class="hmain-pages-menu__item"><a class="main-pages-menu__link" href="#"> Contacts </a></li>
                     </ul>
                 </nav>
             </div>
         </div>
 
         <div class="header__bottom-content main-align">
-            <nav class="categories-menu toggle">
+            <nav class="categories-menu closed toggle">
                 <ul class="categories-menu__links">
                     <li class="categories-menu__item"><a class="categories-menu__link" href="sofas.html"> Sofas </a></li>
                     <li class="categories-menu__item"><a class="categories-menu__link" href="#"> Tables </a></li>
@@ -81,121 +81,42 @@
                     <li class="categories-menu__item"><a class="categories-menu__link" href="#"> Shelves </a></li>
                 </ul>
             </nav>
-            <div class="banner">
-                <span class="banner__subtitle">TOP COLLECTIONS 2022</span>
-                <h1 class="title-main">We Serve Your Dream Furniture</h1>
-                <span class="banner__offer">Get 50% off all products</span>
-                <button class="button-main">SHOP NOW</button>
-            </div>
+
         </div>
     </header>
 
-    <div class="main-content main-align">
-        <div class="advantage">
-            <div class="advantage__column">
-                <div class="advantage__item">
-                    <h3 class="advantage__title delivery">Free Shipping</h3>
-                    <span class="advantage__text">Orders over $100</span>
-                </div>
+    <div class="main-content-sofas main-align">
+        <h1 class="title-main main-content-contacts__title">Sofas</h1>
+
+        <div class="filter">
+            <div class="filter__item">
+                <label class="label" for="sofa-type">Sofa type</label>
+                <select id="sofa-type" name="sofa-type">
+                    <option value="" disabled selected>Type</option>
+                    <option value="standard">Standard</option>
+                    <option value="sleeper">Sleeper</option>
+                    <option value="slipcover">Slipcover</option>
+                </select>
             </div>
-            <div class="advantage__column">
-                <div class="advantage__item">
-                    <h3 class="advantage__title gift-card">Smart Gift Card</h3>
-                    <span class="advantage__text">Buy $1000 to get card</span>
+            <div class="filter__item">
+                <div class="filter__range-title">
+                    <label class="label filter__range-label" for="range">Price</label>
+                    <input type="text" id="input-value" value="$400" disabled>
                 </div>
+                <input type="range" id="range" name="range" value="400" min="400" max="1500" step="50"
+                    onchange="updateTextInput(this.value);">
+
             </div>
-            <div class="advantage__column">
-                <div class="advantage__item">
-                    <h3 class="advantage__title payment">Quick Payment</h3>
-                    <span class="advantage__text">100% secure payment</span>
-                </div>
-            </div>
-            <div class="advantage__column">
-                <div class="advantage__item">
-                    <h3 class="advantage__title support">24/7 Support</h3>
-                    <span class="advantage__text">Quick support</span>
-                </div>
+            <div class="filter__item">
+                <label class="label" for="sort">Sort</label>
+                <select id="sort" name="sort">
+                    <option value="" disabled selected>Sort by</option>
+                    <option value="new">New</option>
+                    <option value="price-high">Price (High to Low)</option>
+                    <option value="price-low">Price (Low to High)</option>
+                </select>
             </div>
         </div>
-
-        <h2 class="title">Categories</h2>
-
-        <div class="category">
-            <div class="category__column">
-                <div class="category__item sofas">
-                    <h3 class="category__title"><a class="category__link" href="sofas.html">Sofas</a></h3>
-                </div>
-            </div>
-            <div class="category__column">
-                <div class="category__item tables">
-                    <h3 class="category__title"><a class="category__link" href="###">Tables</a></h3>
-                </div>
-            </div>
-            <div class="category__column">
-                <div class="category__item chairs">
-                    <h3 class="category__title"><a class="category__link" href="###">Chairs</a></h3>
-                </div>
-            </div>
-            <div class="category__column">
-                <div class="category__item benches">
-                    <h3 class="category__title"><a class="category__link" href="###">Benches</a></h3>
-                </div>
-            </div>
-            <div class="category__column">
-                <div class="category__item shelves">
-                    <h3 class="category__title"><a class="category__link" href="###">Shelves</a></h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="company">
-            <div class="company__column-video">
-                <div class="company__video">
-                    <iframe class="company__iframe-video" src="https://www.youtube.com/embed/0UUPi9t8HzY"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen=""></iframe>
-                </div>
-            </div>
-            <div class="company__column-content">
-                <div class="company__content">
-                    <h2 class="title">Enjoy the most comfortable furniture!</h2>
-                    <p class="company__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A ex adipisci
-                        facere hic quas ab nulla beatae ullam reiciendis autem. Quidem, ex voluptatum voluptate dicta
-                        ipsam distinctio tempora? Nulla, dolorem? Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. A ex adipisci facere hic quas ab nulla beatae ullam reiciendis autem. Quidem, ex
-                        voluptatum voluptate dicta ipsam distinctio tempora? Nulla, dolorem? Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. A ex adipisci
-                        facere hic quas ab nulla beatae ullam reiciendis autem. Quidem, ex voluptatum voluptate dicta
-                        ipsam distinctio tempora? Nulla, dolorem? Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. A ex adipisci facere hic quas ab nulla beatae ullam reiciendis autem. Quidem, ex
-                        voluptatum voluptate dicta ipsam distinctio tempora? Nulla, dolorem?</p>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="title">Create your dream interior</h2>
-
-        <div class="interior-image">
-            <img class="interior-image__item" src="image/interior.jpg" alt="Interior">
-            <span class="interior-image__pointer sofa"></span>
-            <span class="interior-image__pointer table"></span>
-            <span class="interior-image__pointer coffee-table"></span>
-            <div class="interior-image__product sofa-product">
-                <h4><a class="interior-image__product-title" href="">Barcelona Sectional Sofa</a></h4>
-                <span>$1045</span>
-            </div>
-            <div class="interior-image__product table-product">
-                <h4><a class="interior-image__product-title" href="">Madrid Side Table</a></h4>
-                <span>$249</span>
-            </div>
-            <div class="interior-image__product coffee-table-product">
-                <h4><a class="interior-image__product-title" href="">Madrid Coffee Table</a></h4>
-                <span>$575</span>
-            </div>
-        </div>
-
-        <h2 class="title">Our products</h2>
 
         <div class="product">
             <div class="product__column">
@@ -209,46 +130,82 @@
             </div>
             <div class="product__column">
                 <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/chair_adam.jpg"
-                            alt="Adam chair"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="">Adam chair</a></h4>
-                    <span class="product__price">$180</span>
+                    <a class="product__link" href=""><img class="product__image" src="image/sofa_microfiber.jpg"
+                            alt="Microfiber Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Microfiber Sofa</a></h4>
+                    <span class="product__price">$820</span>
                     <a class="product__cart" href="#">Add to Cart</a>
                 </div>
             </div>
             <div class="product__column">
                 <div class="product__item">
-                    <a class="product__link" href=""><img class="product__image" src="image/chairs_acacia.jpg"
-                            alt="Acacia Wood Club Chairs"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="">Acacia Wood Club Chairs</a></h4>
-                    <span class="product__price">$99</span>
+                    <a class="product__link" href=""><img class="product__image" src="image/sofa_modern.jpg"
+                            alt="Modern Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Modern Sofa</a></h4>
+                    <span class="product__price">$445</span>
                     <a class="product__cart" href="#">Add to Cart</a>
                 </div>
             </div>
             <div class="product__column">
                 <div class="product__item">
-                    <a class="product__link" href=""><img class="product__image" src="image/table_madrid.jpg"
-                            alt="Madrid Side Table"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="">Madrid Side Table</a></h4>
-                    <span class="product__price">$249</span>
+                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_barcelona.jpg"
+                            alt="Barcelona Sectional Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Barcelona Sectional Sofa</a></h4>
+                    <span class="product__price">$1045</span>
                     <a class="product__cart" href="#">Add to Cart</a>
                 </div>
             </div>
             <div class="product__column">
                 <div class="product__item">
-                    <a class="product__link" href=""><img class="product__image" src="image/bench_amalia.jpg"
-                            alt="Amalia Cowhide Bench"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="">Amalia Cowhide Bench</a></h4>
-                    <span class="product__price">$130</span>
+                    <a class="product__link" href=""><img class="product__image" src="image/sofa_microfiber.jpg"
+                            alt="Microfiber Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Microfiber Sofa</a></h4>
+                    <span class="product__price">$820</span>
                     <a class="product__cart" href="#">Add to Cart</a>
                 </div>
             </div>
             <div class="product__column">
                 <div class="product__item">
-                    <a class="product__link" href=""><img class="product__image" src="image/coffee-table_madrid.jpg"
-                            alt="Madrid Coffee Table"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="">Madrid Coffee Table</a></h4>
-                    <span class="product__price">$575</span>
+                    <a class="product__link" href=""><img class="product__image" src="image/sofa_modern.jpg"
+                            alt="Modern Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Modern Sofa</a></h4>
+                    <span class="product__price">$445</span>
+                    <a class="product__cart" href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="product__column">
+                <div class="product__item">
+                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_barcelona.jpg"
+                            alt="Barcelona Sectional Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Barcelona Sectional Sofa</a></h4>
+                    <span class="product__price">$1045</span>
+                    <a class="product__cart" href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="product__column">
+                <div class="product__item">
+                    <a class="product__link" href=""><img class="product__image" src="image/sofa_microfiber.jpg"
+                            alt="Microfiber Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Microfiber Sofa</a></h4>
+                    <span class="product__price">$820</span>
+                    <a class="product__cart" href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="product__column">
+                <div class="product__item">
+                    <a class="product__link" href=""><img class="product__image" src="image/sofa_modern.jpg"
+                            alt="Modern Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Modern Sofa</a></h4>
+                    <span class="product__price">$445</span>
+                    <a class="product__cart" href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="product__column">
+                <div class="product__item">
+                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_barcelona.jpg"
+                            alt="Barcelona Sectional Sofa"></a>
+                    <h4 class="product__title"><a class="product__name-link" href="">Barcelona Sectional Sofa</a></h4>
+                    <span class="product__price">$1045</span>
                     <a class="product__cart" href="#">Add to Cart</a>
                 </div>
             </div>
@@ -272,46 +229,17 @@
             </div>
         </div>
 
-        <h2 class="title">Our partners</h2>
-
-        <div class="partners">
-            <div class="partners__item wannabiz">
-                <img src="image/wannabiz_logo.png" alt="Wannabiz logo">
-            </div>
-            <div class="partners__item tapgerine">
-                <img src="image/tapgerine_logo.png" alt="Tapgerine logo">
-            </div>
-            <div class="partners__item three-d-look">
-                <img src="image/3dlook_logo.png" alt="3D Look logo">
-            </div>
-            <div class="partners__item adtelligent">
-                <img src="image/adtelligent_logo.png" alt="Adtelligent logo">
-            </div>
-            <div class="partners__item eco-leasing">
-                <img src="image/eco_leasing_logo.png" alt="Eco Leasing logo">
-            </div>
-            <div class="partners__item clickky">
-                <img src="image/clickky_logo.png" alt="Clickky logo">
-            </div>
-            <div class="partners__item infra-tek">
-                <img src="image/infra_tek_logo.png" alt="InfraTek logo">
-            </div>
-            <div class="partners__item orangear">
-                <img src="image/orangear_logo.png" alt="Orangear logo">
-            </div>
-        </div>
-
-        <h2 class="title">Stay in touch</h2>
-
-        <form class="subscription-form">
-            <div class="subscription-form__items">
-                <input placeholder="Enter your Email" type="email" name="userEmail"
-                    class="subscription-form__input-email">
-                <button class="subscription-form__button">Subscribe</button>
-            </div>
-        </form>
+        <ul class="page">
+            <li class="page__item"><a class="page__link active-page" href="#">1</a></li>
+            <li class="page__item"><a  class="page__link" href="#">2</a></li>
+            <li class="page__item"><a class="page__link" href="#">3</a></li>
+            <li class="page__item"><a class="page__link" href="#">...</a></li>
+            <li class="page__item"><a class="page__link" href="#">10</a></li>           
+        </ul>
 
     </div>
+
+
 
     <footer class="footer">
         <div class="footer__inner main-align">
