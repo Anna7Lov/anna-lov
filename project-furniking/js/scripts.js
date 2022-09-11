@@ -19,7 +19,7 @@ function handleMenuButtonClick() {
 }
 
 function handleAdaptiveMenuButtonClick() {
-  verticalMenu.classList.toggle('active');
+  verticalMenu.classList.toggle('active');  
 }
 
 const sofaPointer = document.querySelector('.sofa');
