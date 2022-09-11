@@ -57,7 +57,7 @@ body {
     .header__search-button:hover {
       background-color: #FF7518; }
   .header__icons {
-    width: 8%;
+    width: 9%;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -77,7 +77,8 @@ body {
     background: #F7F8FA; }
   .header__middle-content-inner {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
   .header__bottom-content {
     display: flex; }
   .header__catalog-button {

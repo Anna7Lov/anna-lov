@@ -89,7 +89,7 @@ $white-color: #FFFFFF;
     }
 
     &__icons {
-        width: 8%;
+        width: 9%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -120,6 +120,7 @@ $white-color: #FFFFFF;
     &__middle-content-inner {
         display: flex;
         align-items: center;
+        position: relative;
     }
 
     &__bottom-content {
