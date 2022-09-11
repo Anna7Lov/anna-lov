@@ -119,7 +119,6 @@ body {
 .categories-menu {
   display: block;
   background: #F7F8FA;
-  width: 267px;
   position: absolute;
   top: 197px; }
   .categories-menu__item {
@@ -690,7 +689,8 @@ body {
     width: 140px;
     margin-right: 20px; }
   .filter__range-title {
-    display: flex; }
+    display: flex;
+    align-items: flex-start; }
   .filter__range-label {
     margin-right: 10px; }
 
@@ -711,10 +711,11 @@ body {
   background: none;
   width: 60px;
   font-weight: 600;
-  font-size: 18px;
-  color: #7AC751;
+  font-size: 16px;
+  color: #555555;
   margin-bottom: 15px;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Rubik', sans-serif; }
 
 .page {
   display: flex;
@@ -757,17 +758,17 @@ body {
     .banner__title {
       font-size: 28px; }
 
-  .title {
+  .title-main, .title {
     font-size: 28px; }
 
   .product__column {
     width: 33.33%; } }
 @media screen and (max-width: 900px) {
   .header__search-input {
-    width: 300px; }
+    width: 350px; }
 
   .main-pages-menu__link {
-    padding: 25px 15px; }
+    padding: 25px 13px; }
 
   .banner {
     background: url(../image/main_banner_3.jpg) no-repeat center;
@@ -792,10 +793,12 @@ body {
     width: 50%; } }
 @media screen and (max-width: 767px) {
   .header__search {
-    order: 1; }
+    order: 0;
+    width: 100%;
+    margin-bottom: 15px; }
   .header__icons {
-    width: 20%;
-    order: 0; }
+    order: 1;
+    width: 20%; }
   .header__menu {
     display: block; }
   .header__middle-content {
@@ -822,6 +825,9 @@ body {
       padding: 15px 25px;
       color: #FFFFFF; }
 
+  .categories-menu {
+    top: 256px; }
+
   .banner {
     width: 100%;
     margin-left: 0;
@@ -846,19 +852,6 @@ body {
 
   .vertical-menu {
     width: 70%; } }
-@media screen and (max-width: 710px) {
-  .header__search {
-    order: 0;
-    width: 100%;
-    margin-bottom: 15px; }
-  .header__icons {
-    order: 1; }
-
-  .logo {
-    order: 2; }
-
-  .categories-menu {
-    top: 255px; } }
 @media screen and (max-width: 650px) {
   .header__icons {
     width: 30%; }
@@ -910,6 +903,14 @@ body {
     width: 40%; }
   .header__middle-content-inner {
     padding-right: 0; }
+  .header__catalog-button {
+    width: 250px; }
+
+  .main-pages-menu__link {
+    width: 248px; }
+
+  .categories-menu__link {
+    width: 248px; }
 
   .banner__subtitle {
     font-size: 16px; }

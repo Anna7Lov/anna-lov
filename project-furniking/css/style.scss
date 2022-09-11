@@ -174,8 +174,7 @@ $white-color: #FFFFFF;
 
 .categories-menu {
     display: block;
-    background: $secondary-color;
-    width: 267px;
+    background: $secondary-color;    
     position: absolute;
     top: 197px;
 
@@ -946,7 +945,8 @@ $white-color: #FFFFFF;
     }
 
     &__range-title {
-        display: flex;                   
+        display: flex;  
+        align-items: flex-start;                 
     }   
 
     &__range-label {
@@ -973,10 +973,11 @@ $white-color: #FFFFFF;
     background: none;
     width: 60px;
     font-weight: 600;
-    font-size: 18px;
-    color: $main-color; 
+    font-size: 16px;
+    color: $text-color; 
     margin-bottom: 15px;
     padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
 .page {
@@ -1039,7 +1040,7 @@ $white-color: #FFFFFF;
         }
     }
 
-    .title {
+    .title-main, .title {
         font-size: 28px;
     }
 
@@ -1054,13 +1055,13 @@ $white-color: #FFFFFF;
 @media screen and (max-width: 900px) {
     .header {
         &__search-input {
-            width: 300px;
+            width: 350px;
         }
     }
 
     .main-pages-menu {
         &__link {
-            padding: 25px 15px;
+            padding: 25px 13px;
         }
     }
 
@@ -1106,12 +1107,14 @@ $white-color: #FFFFFF;
 @media screen and (max-width: 767px) {
     .header {
         &__search {
-            order: 1;
+            order: 0;
+            width: 100%;
+            margin-bottom: 15px;
         }
 
         &__icons {
+            order: 1;
             width: 20%;
-            order: 0;
         }
 
         &__menu {
@@ -1132,7 +1135,7 @@ $white-color: #FFFFFF;
 
     .logo {
         order: 2;
-    }
+    }   
 
     .main-pages-menu {
         background: lighten($main-color, 10%);
@@ -1154,6 +1157,10 @@ $white-color: #FFFFFF;
             padding: 15px 25px;
             color: $white-color;
         }
+    }
+
+    .categories-menu {
+        top: 256px;
     }
 
     .banner {
@@ -1195,28 +1202,6 @@ $white-color: #FFFFFF;
 
     .vertical-menu {
         width: 70%;
-    }
-}
-
-@media screen and (max-width: 710px) {
-    .header {
-        &__search {
-            order: 0;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        &__icons {
-            order: 1;
-        }
-    }
-
-    .logo {
-        order: 2;
-    }
-
-    .categories-menu {
-        top: 255px;
     }
 }
 
@@ -1307,6 +1292,22 @@ $white-color: #FFFFFF;
         &__middle-content-inner {
             padding-right: 0;
         }
+
+        &__catalog-button {
+            width: 250px;
+        }        
+    }
+
+    .main-pages-menu {
+        &__link {
+            width: 248px;            
+        }        
+    }
+
+    .categories-menu {
+        &__link {
+            width: 248px;            
+        }        
     }
 
     .banner {
