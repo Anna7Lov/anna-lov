@@ -183,6 +183,9 @@ body {
 .toggle {
   display: block; }
 
+.active {
+  display: block; }
+
 .closed {
   display: none; }
 

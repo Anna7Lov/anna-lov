@@ -4,7 +4,7 @@ sideMenuButton.onClick = handleSideMenuButtonClick;
 sideMenuButton.addEventListener('click', handleSideMenuButtonClick);
 
 function handleSideMenuButtonClick() {
-  verticalMenu.classList.toggle('closed');
+  verticalMenu.classList.toggle('closed');  
 }
 
 const menuButton = document.querySelector('.header__menu');
@@ -15,12 +15,14 @@ menuButton.addEventListener('click', handleMenuButtonClick);
 function handleMenuButtonClick() {
   mobileMenu.classList.toggle('active');
   verticalMenu.classList.remove('active');
+  verticalMenu.classList.add('closed');
   sideMenuButton.addEventListener('click', handleAdaptiveMenuButtonClick);
+  function handleAdaptiveMenuButtonClick() {
+    verticalMenu.classList.toggle('active');  
+  }
 }
 
-function handleAdaptiveMenuButtonClick() {
-  verticalMenu.classList.toggle('active');  
-}
+
 
 const sofaPointer = document.querySelector('.sofa');
 const sofaProduct = document.querySelector('.sofa-product');

@@ -18,6 +18,8 @@ $white-color: #FFFFFF;
     margin-right: auto;
 }
 
+
+
 .header {
     margin-bottom: 70px;
 
@@ -258,9 +260,15 @@ $white-color: #FFFFFF;
     display: block;
 }
 
+.active {
+    display: block;
+}
+
 .closed {
     display: none;
 }
+
+
 
 .advantage {
     display: flex;
@@ -1176,7 +1184,6 @@ $white-color: #FFFFFF;
     }
 
     .product {
-
         &__column {
             width: 50%;
         }
