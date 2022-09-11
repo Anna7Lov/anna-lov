@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniking Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main-content-cart main-align">
+        <div class="cart">
+            <h1 class="title-main main-content-cart__title">Cart</h1>
+            <button class="cart__close-button"></button>
+            <div class="cart__order">
+                <div class="cart__item">
+                    <a class="cart__link" href="#"><img class="cart__image" src="image/sofa_barcelona.jpg"
+                            alt="Barcelona Sectional Sofa"></a>
+                    <div class="cart__main-content">
+                        <h4 class="cart__title"><a class="cart__name-link" href="">Barcelona Sectional Sofa</a></h4>
+                        <div class="cart__count-list">
+                            <button class="cart__quantity-button">-</button>
+                            <input class="cart__quantity-value" type="text" readonly value="1">
+                            <button class="cart__quantity-button">+</button>
+                            <button class="cart__remove-button"></button>
+                        </div>
+                    </div>
+                    <span class="cart__price">$1045</span>
+                </div>
+                <div class="cart__item">
+                    <a class="cart__link" href="#"><img class="cart__image" src="image/coffee-table_madrid.jpg"
+                            alt="Barcelona Sectional Sofa"></a>
+                    <div class="cart__main-content">
+                        <h4 class="cart__title"><a class="cart__name-link" href="">Madrid Coffee Table</a></h4>
+                        <div class="cart__count-list">
+                            <button class="cart__quantity-button">-</button>
+                            <input class="cart__quantity-value" type="text" readonly value="1">
+                            <button class="cart__quantity-button">+</button>
+                            <button class="cart__remove-button"></button>
+                        </div>
+                    </div>
+                    <span class="cart__price">$575</span>
+                </div>
+            </div>
+            <span class="cart__total-sum">Total: $1620</span>
+            <div class="cart__action-buttons">
+                <button class="cart__continue-button">Continue shopping</button>
+                <a class="link" href="#">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+
+</html>
