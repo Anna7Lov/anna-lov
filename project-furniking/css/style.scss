@@ -132,16 +132,12 @@ $white-color: #FFFFFF;
     &__middle-content-inner {
         display: flex;
         align-items: center;
-        position: relative;
-    }
-
-    &__bottom-content {
-        display: flex;
     }
 
     &__catalog-button {
         display: block;
         width: 267px;
+        height: 66px;
         border: none;
         padding: 24px 45px;
         background: $main-color;
@@ -190,11 +186,15 @@ $white-color: #FFFFFF;
     }
 }
 
+.categories-menu-wrapper {
+    position: relative;
+}
+
 .categories-menu {
     display: block;
     background: $secondary-color;
     position: absolute;
-    top: 197px;
+    top: 0;
 
     &__item {
         border: 1px solid #E3E3E3;
@@ -808,16 +808,16 @@ $white-color: #FFFFFF;
 /* categories */
 .main-content-categories {
     &__title {
-        text-align: center;   
-        margin-bottom: 35px;     
+        text-align: center;
+        margin-bottom: 35px;
     }
 }
 
 /* contacts */
 .main-content-contacts {
     &__title {
-        text-align: center;   
-        margin-bottom: 35px;      
+        text-align: center;
+        margin-bottom: 35px;
     }
 
     &__text {
@@ -1027,7 +1027,7 @@ $white-color: #FFFFFF;
 
 .page {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 
     &__item {
         margin-right: 10px;
@@ -1072,7 +1072,7 @@ $white-color: #FFFFFF;
 .cart {
     position: relative;
     width: 55%;
-    margin: 70px auto;
+    margin: 50px auto;
     background: $secondary-color;
     border-radius: 5px;
     padding: 20px;
@@ -1291,6 +1291,7 @@ $white-color: #FFFFFF;
         color: $text-color;
     }
 }
+
 /* sofa-barcelona */
 .main-content-sofa-barcelona {
     margin-bottom: 70px;
@@ -1536,12 +1537,14 @@ $white-color: #FFFFFF;
             font-size: 18px;
         }
 
-        &__feature, &__text {
+        &__feature,
+        &__text {
             font-size: 16px;
-        }        
+        }
     }
 
     .table {
+
         &__property,
         &__value {
             font-size: 16px;
@@ -1605,7 +1608,7 @@ $white-color: #FFFFFF;
     }
 
     .categories-menu {
-        top: 261px;
+        top: 66px;
     }
 
     .banner {
@@ -1712,7 +1715,7 @@ $white-color: #FFFFFF;
     }
 
     .form-questions {
-        width: 100%;        
+        width: 100%;
     }
 
     .filter {
@@ -1792,7 +1795,7 @@ $white-color: #FFFFFF;
         }
 
         &__icons {
-            width: 45%;            
+            width: 45%;
             order: 2;
         }
 
@@ -1818,11 +1821,9 @@ $white-color: #FFFFFF;
     }
 
     .categories-menu {
-        top: 308px;
-
         &__link {
             width: 248px;
-        }       
+        }
     }
 
     .banner {
