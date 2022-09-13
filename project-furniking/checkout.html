@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Furniking Sofas category</title>
+    <title>Furniking Checkout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -58,14 +58,14 @@
 
         <div class="header__middle-content toggle">
             <div class="header__middle-content-inner main-align">
-                <button class="header__catalog-button">&#9660; Catalog</button>
+                <button class="header__catalog-button">&#9660 Catalog</button>
                 <nav class="main-pages-menu">
                     <ul class="main-pages-menu__links">
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="index.html"> Home </a></li>
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="#"> About </a></li>
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="#"> Blog </a></li>
                         <li class="main-pages-menu__item"><a class="main-pages-menu__link" href="#"> Reviews </a></li>
-                        <li class="hmain-pages-menu__item"><a class="main-pages-menu__link" href="contacts.html"> Contacts </a></li>
+                        <li class="hmain-pages-menu__item"><a class="main-pages-menu__link" href="contacts.html">Contacts </a></li>
                     </ul>
                 </nav>
             </div>
@@ -74,7 +74,7 @@
         <div class="header__bottom-content main-align">
             <nav class="categories-menu closed toggle">
                 <ul class="categories-menu__links">
-                    <li class="categories-menu__item"><a class="categories-menu__link" href="sofas.html"> Sofas </a></li>
+                    <li class="categories-menu__item"><a class="categories-menu__link" href="sofas.html"> Sofas </a>                    </li>
                     <li class="categories-menu__item"><a class="categories-menu__link" href="#"> Tables </a></li>
                     <li class="categories-menu__item"><a class="categories-menu__link" href="#"> Chairs </a></li>
                     <li class="categories-menu__item"><a class="categories-menu__link" href="#"> Benches </a></li>
@@ -85,156 +85,81 @@
         </div>
     </header>
 
-    <div class="main-content-sofas main-align">
-        <h1 class="title-main main-content-contacts__title">Sofas</h1>
+    <div class="main-content-checkout main-align">
+        <h1 class="title-main main-content-contacts__title">Checkout</h1>
+        <div class="checkout">
+            
+            <div class="form-checkout">                
+                <form class="form">
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Personal data</legend>
+                        <input class="form__input" placeholder="First name" type="text" required>
+                        <input class="form__input" placeholder="Last name" type="text" required>
+                        <input class="form__input" placeholder="Telephone" type="tel" required>
+                        <input class="form__input" placeholder="Email" type="email" required>
+                        <select class="form__select" name="country" required>
+                            <option value="" disabled selected>Choose country</option>
+                            <option value="united-kingdom">United Kingdom</option>
+                            <option value="united-states">United States</option>
+                            <option value="germany">Germany</option>
+                            <option value="france">France</option>
+                            <option value="spain">Spain</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="poland">Poland</option>
+                            <option value="ukraine">Ukraine</option>
+                        </select>
+                        <input class="form__input" placeholder="City" type="text" required>
+                        <input class="form__input" placeholder="Address" type="text" required>
+                        <textarea class="form__textarea" rows="3" placeholder="Comment" required></textarea>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Shipping methods</legend>
+                        <div class="form__variants">
+                            <input type="radio" checked name="shipping" value="hermes" id="hermes">
+                            <label class="form__label" for="hermes">Hermes $0 2-7 days</label>
+                        </div>
+                        <div class="form__variants">
+                            <input type="radio" name="shipping" value="dhl" id="dhl">
+                            <label class="form__label" for="dhl">DHL $10 1-5 days</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                        <legend class="form__legend">Payment methods</legend>
+                        <div class="form__variants">
+                            <input type="radio" checked name="payment" value="card" id="card">
+                            <label class="form__label" for="card">Credit or Debit Card</label>
+                        </div>
+                        <div class="form__variants">
+                            <input type="radio" name="payment" value="paypal" id="paypal">
+                            <label class="form__label" for="paypal">PayPal</label>
+                        </div>
+                    </fieldset>
+                    <button class="button-main">Submit</button>
+                </form>
+            </div>
 
-        <div class="filter">
-            <div class="filter__item">
-                <label class="filter__label" for="sofa-type">Sofa type</label>
-                <select id="sofa-type" name="sofa-type">
-                    <option value="" disabled selected>Type</option>
-                    <option value="standard">Standard</option>
-                    <option value="sleeper">Sleeper</option>
-                    <option value="slipcover">Slipcover</option>
-                </select>
-            </div>
-            <div class="filter__item">
-                <div class="filter__range-title">
-                    <label class="filter__range-label" for="range">Price</label>
-                    <input type="text" id="input-value" value="$1500" disabled>
-                </div>
-                <input type="range" id="range" name="range" value="1500" min="400" max="1500" step="50"
-                    onchange="updateTextInput(this.value);">
-            </div>
-            <div class="filter__item">
-                <label class="filter__label" for="sort">Sort</label>
-                <select id="sort" name="sort">
-                    <option value="" disabled selected>Sort by</option>
-                    <option value="new">New</option>
-                    <option value="price-high">Price (High to Low)</option>
-                    <option value="price-low">Price (Low to High)</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="product">
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="sofa-barcelona.html"><img class="product__image" src="image/sofa_barcelona.jpg"
-                            alt="Barcelona Sectional Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="sofa-barcelona.html">Barcelona Sectional Sofa</a></h4>
-                    <span class="product__price">$1045</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_microfiber.jpg"
-                            alt="Microfiber Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Microfiber Sofa</a></h4>
-                    <span class="product__price">$820</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_modern.jpg"
-                            alt="Modern Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Modern Sofa</a></h4>
-                    <span class="product__price">$445</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="sofa-barcelona.html"><img class="product__image" src="image/sofa_barcelona.jpg"
-                            alt="Barcelona Sectional Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="sofa-barcelona.html">Barcelona Sectional Sofa</a></h4>
-                    <span class="product__price">$1045</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_microfiber.jpg"
-                            alt="Microfiber Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Microfiber Sofa</a></h4>
-                    <span class="product__price">$820</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_modern.jpg"
-                            alt="Modern Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Modern Sofa</a></h4>
-                    <span class="product__price">$445</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="sofa-barcelona.html"><img class="product__image" src="image/sofa_barcelona.jpg"
-                            alt="Barcelona Sectional Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="sofa-barcelona.html">Barcelona Sectional Sofa</a></h4>
-                    <span class="product__price">$1045</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_microfiber.jpg"
-                            alt="Microfiber Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Microfiber Sofa</a></h4>
-                    <span class="product__price">$820</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_modern.jpg"
-                            alt="Modern Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Modern Sofa</a></h4>
-                    <span class="product__price">$445</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="sofa-barcelona.html"><img class="product__image" src="image/sofa_barcelona.jpg"
-                            alt="Barcelona Sectional Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="sofa-barcelona.html">Barcelona Sectional Sofa</a></h4>
-                    <span class="product__price">$1045</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_microfiber.jpg"
-                            alt="Microfiber Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Microfiber Sofa</a></h4>
-                    <span class="product__price">$820</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
-                </div>
-            </div>
-            <div class="product__column">
-                <div class="product__item">
-                    <a class="product__link" href="#"><img class="product__image" src="image/sofa_modern.jpg"
-                            alt="Modern Sofa"></a>
-                    <h4 class="product__title"><a class="product__name-link" href="#">Modern Sofa</a></h4>
-                    <span class="product__price">$445</span>
-                    <a class="link" href="cart.html">Add to Cart</a>
+            <div class="order-checkout">
+                <div class="order">
+                    <div class="order__item">
+                        <img class="order__image" src="image/sofa_barcelona.jpg" alt="Barcelona Sectional Sofa">
+                        <div>
+                            <h4 class="order__title">Barcelona Sectional Sofa</h4>
+                            <input class="order__quantity-value" type="text" readonly value="1">
+                            <span class="order__price">$1045</span>
+                        </div>
+                    </div>
+                    <div class="order__item">
+                        <img class="order__image" src="image/coffee-table_madrid.jpg" alt="Madrid Coffee Table">
+                        <div>
+                            <h4 class="order__title">Madrid Coffee Table</h4>
+                            <input class="order__quantity-value" type="text" readonly value="1">
+                            <span class="order__price">$575</span>
+                        </div>
+                    </div>
+                    <span class="order__total-sum">Total: $1620</span>
                 </div>
             </div>
         </div>
-
-        <ul class="page">
-            <li class="page__item"><a class="page__link active-page" href="#">1</a></li>
-            <li class="page__item"><a class="page__link" href="#">2</a></li>
-            <li class="page__item"><a class="page__link" href="#">3</a></li>
-            <li class="page__item"><a class="page__link" href="#">...</a></li>
-            <li class="page__item"><a class="page__link" href="#">10</a></li>
-        </ul>
     </div>
 
     <footer class="footer">

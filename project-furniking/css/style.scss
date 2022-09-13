@@ -12,13 +12,32 @@ $text-color: #555555;
 $bright-color: #FF7518;
 $white-color: #FFFFFF;
 
-.main-align {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+@mixin medium-font() {
+    font-weight: 400;
+    font-size: 18px;
 }
 
+@mixin small-font() {
+    font-weight: 400;
+    font-size: 16px;
+}
 
+@mixin bold-medium-font() {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@mixin bold-small-font() {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@mixin border() {
+    border-top: 5px solid lighten($main-color, 5%);
+    border-left: 5px solid lighten($main-color, 5%);
+    border-right: 5px solid darken($main-color, 5%);
+    border-bottom: 5px solid darken($main-color, 5%);
+}
 
 .header {
     margin-bottom: 70px;
@@ -34,8 +53,7 @@ $white-color: #FFFFFF;
     }
 
     &__greeting {
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         color: $white-color;
     }
 
@@ -95,14 +113,8 @@ $white-color: #FFFFFF;
         align-items: center;
     }
 
-    &__cabinet {
+    &__icon {
         display: block;
-    }
-
-    &__cart {
-        background: none;
-        border: none;
-        cursor: pointer;
     }
 
     &__menu {
@@ -135,8 +147,7 @@ $white-color: #FFFFFF;
         background: $main-color;
         color: $white-color;
         text-transform: uppercase;
-        font-weight: 600;
-        font-size: 16px;
+        @include bold-small-font();
         letter-spacing: 2px;
         cursor: pointer;
 
@@ -144,6 +155,12 @@ $white-color: #FFFFFF;
             background: $bright-color;
         }
     }
+}
+
+.main-align {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
@@ -164,8 +181,7 @@ $white-color: #FFFFFF;
         text-decoration: none;
         color: $text-color;
         padding: 25px 64.5px;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
 
         &:hover {
             background: $bright-color;
@@ -192,8 +208,7 @@ $white-color: #FFFFFF;
         display: block;
         width: 265px;
         padding: 15px 25px;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         color: $text-color;
         text-decoration: none;
 
@@ -213,8 +228,7 @@ $white-color: #FFFFFF;
 
     &__subtitle {
         display: block;
-        font-weight: 400;
-        font-size: 18px;
+        @include medium-font();
         color: $main-color;
         margin-bottom: 10px;
     }
@@ -222,8 +236,8 @@ $white-color: #FFFFFF;
     &__offer {
         display: block;
         font-weight: 600;
-        font-size: 22px;
-        color: rgba(81, 81, 81, 0.71);
+        font-size: 20px;
+        color: $text-color;
         margin-bottom: 20px;
     }
 }
@@ -241,14 +255,10 @@ $white-color: #FFFFFF;
     background: rgba(122, 199, 81, 0.85);
     border-radius: 5px;
     padding: 12px;
-    font-weight: 600;
-    font-size: 16px;
+    @include bold-small-font();
     color: $white-color;
     cursor: pointer;
-    border-top: 5px solid lighten($main-color, 5%);
-    border-left: 5px solid lighten($main-color, 5%);
-    border-right: 5px solid darken($main-color, 5%);
-    border-bottom: 5px solid darken($main-color, 5%);
+    @include border();
     transition: 1s;
 
     &:hover {
@@ -257,10 +267,7 @@ $white-color: #FFFFFF;
     }
 }
 
-.toggle {
-    display: block;
-}
-
+.toggle,
 .active {
     display: block;
 }
@@ -268,8 +275,6 @@ $white-color: #FFFFFF;
 .closed {
     display: none;
 }
-
-
 
 .advantage {
     display: flex;
@@ -356,10 +361,7 @@ $white-color: #FFFFFF;
     &__title {
         width: 100%;
         background: rgba(122, 199, 81, 0.85);
-        border-top: 5px solid #89cd64;
-        border-left: 5px solid #89cd64;
-        border-right: 5px solid #6bc13e;
-        border-bottom: 5px solid #6bc13e;
+        @include border();
 
         &:hover {
             background: $bright-color;
@@ -371,8 +373,7 @@ $white-color: #FFFFFF;
         width: 100%;
         text-decoration: none;
         color: $white-color;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         padding: 10px 25px;
     }
 }
@@ -425,8 +426,7 @@ $white-color: #FFFFFF;
     }
 
     &__text {
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         color: $text-color;
     }
 }
@@ -438,10 +438,10 @@ $white-color: #FFFFFF;
     &__item {
         display: block;
         width: 100%;
-        border-top: 15px solid #89cd64;
-        border-left: 15px solid #89cd64;
-        border-right: 15px solid #6bc13e;
-        border-bottom: 15px solid #6bc13e;
+        border-top: 15px solid lighten($main-color, 5%);
+        border-left: 15px solid lighten($main-color, 5%);
+        border-right: 15px solid darken($main-color, 5%);
+        border-bottom: 15px solid darken($main-color, 5%);
     }
 
     &__pointer {
@@ -471,8 +471,7 @@ $white-color: #FFFFFF;
         padding: 10px;
         background: $bright-color;
         color: $white-color;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         margin-bottom: 35px;
     }
 
@@ -481,8 +480,7 @@ $white-color: #FFFFFF;
         color: $white-color;
         text-decoration: none;
         margin-bottom: 10px;
-        font-weight: 600;
-        font-size: 16px;
+        @include bold-small-font();
 
         &:hover {
             text-decoration: underline;
@@ -495,7 +493,7 @@ $white-color: #FFFFFF;
     left: 26%;
 }
 
-.table-product {
+.small-table-product {
     top: 37%;
     left: 69%;
 }
@@ -548,7 +546,7 @@ $white-color: #FFFFFF;
     left: 47%;
 }
 
-.table {
+.small-table {
     top: 52%;
     left: 90%;
 }
@@ -592,8 +590,7 @@ $white-color: #FFFFFF;
 
     &__name-link {
         text-decoration: none;
-        font-weight: 400;
-        font-size: 18px;
+        @include medium-font();
         color: $text-color;
 
         &:hover {
@@ -603,11 +600,10 @@ $white-color: #FFFFFF;
 
     &__price {
         display: block;
-        font-weight: 600;
-        font-size: 18px;
+        @include bold-medium-font();
         color: $main-color;
         margin-bottom: 15px;
-    }    
+    }
 }
 
 .link {
@@ -617,14 +613,10 @@ $white-color: #FFFFFF;
     background: rgba(122, 199, 81, 0.85);
     border-radius: 5px;
     padding: 12px;
-    font-weight: 600;
-    font-size: 16px;
+    @include bold-small-font();
     color: $white-color;
     text-align: center;
-    border-top: 5px solid #89cd64;
-    border-left: 5px solid #89cd64;
-    border-right: 5px solid #6bc13e;
-    border-bottom: 5px solid #6bc13e;
+    @include border();
     transition: 1s;
 
     &:hover {
@@ -694,14 +686,12 @@ $white-color: #FFFFFF;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         border-right: none;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         color: $text-color;
         outline: none;
 
         &::placeholder {
-            font-weight: 400;
-            font-size: 16px;
+            @include small-font();
             color: #B0B0B0;
             font-family: 'Rubik';
         }
@@ -712,8 +702,7 @@ $white-color: #FFFFFF;
         background: $main-color;
         border-radius: 5px;
         font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
+        @include bold-small-font();
         color: $white-color;
         display: block;
         cursor: pointer;
@@ -742,9 +731,8 @@ $white-color: #FFFFFF;
     }
 
     &__text {
-        max-width: 300px;
-        font-weight: 400;
-        font-size: 16px;
+        max-width: 290px;
+        @include small-font();
         color: $text-color;
         margin-bottom: 35px;
     }
@@ -796,8 +784,7 @@ $white-color: #FFFFFF;
     }
 
     &__title {
-        font-weight: 600;
-        font-size: 16px;
+        @include bold-small-font();
         color: $text-color;
         text-transform: uppercase;
         margin-bottom: 25px;
@@ -809,8 +796,7 @@ $white-color: #FFFFFF;
 
     &__link {
         text-decoration: none;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         color: $text-color;
 
         &:hover {
@@ -819,15 +805,23 @@ $white-color: #FFFFFF;
     }
 }
 
+/* categories */
+.main-content-categories {
+    &__title {
+        text-align: center;   
+        margin-bottom: 35px;     
+    }
+}
+
+/* contacts */
 .main-content-contacts {
     &__title {
-        text-align: center;
-        margin-bottom: 35px;
+        text-align: center;   
+        margin-bottom: 35px;      
     }
 
     &__text {
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         color: $text-color;
         text-align: center;
         margin-bottom: 70px;
@@ -850,8 +844,7 @@ $white-color: #FFFFFF;
     }
 
     &__address-item {
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         margin-bottom: 15px;
         color: $text-color;
     }
@@ -863,8 +856,7 @@ $white-color: #FFFFFF;
 
     &__tel {
         display: block;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         margin-bottom: 15px;
         text-decoration: none;
         color: $text-color;
@@ -872,8 +864,7 @@ $white-color: #FFFFFF;
 
     &__email {
         display: block;
-        font-weight: 400;
-        font-size: 16px;
+        @include small-font();
         margin-bottom: 15px;
         text-decoration: none;
         color: $text-color;
@@ -889,7 +880,18 @@ $white-color: #FFFFFF;
     border-radius: 5px;
     padding: 20px;
 
-    &__input {
+    &__fieldset {
+        margin-bottom: 35px;
+    }
+
+    &__legend {
+        @include medium-font();
+        color: $text-color;
+        margin-bottom: 15px;
+    }
+
+    &__input,
+    &__select {
         display: block;
         width: 100%;
         margin-bottom: 15px;
@@ -898,13 +900,17 @@ $white-color: #FFFFFF;
         font-size: 16px;
         color: $text-color;
         border: 1px solid #E3E3E3;
+        font-family: 'Rubik';
 
         &::placeholder {
-            font-weight: 400;
-            font-size: 16px;
+            @include small-font();
             color: #B0B0B0;
             font-family: 'Rubik';
         }
+    }
+
+    &__select {
+        padding-left: 11px;
     }
 
     &__textarea {
@@ -913,17 +919,28 @@ $white-color: #FFFFFF;
         margin-bottom: 15px;
         padding: 15px;
         border-radius: 5px;
-        font-size: 16px;
+        @include small-font();
         color: $text-color;
         border: 1px solid #E3E3E3;
         resize: none;
 
         &::placeholder {
-            font-weight: 400;
-            font-size: 16px;
+            @include small-font();
             color: #B0B0B0;
             font-family: 'Rubik';
         }
+    }
+
+    &__variants:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &__label {
+        display: inline-block;
+        width: 150px;
+        @include small-font();
+        color: $text-color;
+        margin-right: 15px;
     }
 }
 
@@ -943,58 +960,74 @@ $white-color: #FFFFFF;
     }
 }
 
+/* sofas */
+.main-content-sofas {
+    margin-bottom: 70px;
+}
+
 .filter {
     display: flex;
     margin-bottom: 70px;
     flex-wrap: wrap;
+    align-items: center;
 
     &__item {
         width: 140px;
         margin-right: 20px;
     }
 
+    &__label {
+        display: block;
+        margin-bottom: 15px;
+        @include bold-medium-font();
+        color: $main-color;
+    }
+
     &__range-title {
         display: flex;
         align-items: flex-start;
+        margin-bottom: 15px;
     }
 
     &__range-label {
+        display: block;
+        @include bold-medium-font();
+        color: $main-color;
         margin-right: 10px;
     }
-
-}
-
-.label {
-    display: block;
-    margin-bottom: 15px;
-    font-weight: 600;
-    font-size: 18px;
-    color: $main-color;
 }
 
 #sofa-type,
 #sort {
     width: 100%;
     border: 1px solid $main-color;
+    height: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $text-color;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#range {
+    height: 25px;
 }
 
 #input-value {
     display: block;
+    height: 18px;
     border: none;
     background: none;
     width: 60px;
-    font-weight: 600;
-    font-size: 16px;
+    @include bold-small-font();
     color: $text-color;
-    margin-bottom: 15px;
     padding: 0;
     font-family: 'Rubik', sans-serif;
 }
 
 .page {
     display: flex;
-    justify-content: center;
-    margin-bottom: 70px;
+    justify-content: center;    
 
     &__item {
         margin-right: 10px;
@@ -1028,6 +1061,7 @@ $white-color: #FFFFFF;
     }
 }
 
+/* cart */
 .main-content-cart {
     &__title {
         text-align: center;
@@ -1098,8 +1132,7 @@ $white-color: #FFFFFF;
     &__name-link {
         text-decoration: none;
         color: $text-color;
-        font-weight: 400;
-        font-size: 18px;
+        @include medium-font();
     }
 
     &__count-list {
@@ -1110,12 +1143,12 @@ $white-color: #FFFFFF;
         width: 40px;
         height: 40px;
         padding: 8px;
-        border: 2px solid #7AC751;
+        border: 2px solid $main-color;
         font-weight: 500;
         font-size: 18px;
         text-decoration: none;
         background: $white-color;
-        color: #7AC751;
+        color: $main-color;
         text-align: center;
         cursor: pointer;
         margin-right: 15px;
@@ -1132,8 +1165,7 @@ $white-color: #FFFFFF;
         background: none;
         width: 15px;
         margin-right: 10px;
-        font-size: 16px;
-        font-weight: 400;
+        @include small-font();
         color: $text-color;
         font-family: 'Rubik';
     }
@@ -1155,8 +1187,11 @@ $white-color: #FFFFFF;
             width: 2px;
             height: 15px;
             background: $text-color;
-            transform: rotate(45deg);
             bottom: 3px;
+        }
+
+        &::before {
+            transform: rotate(45deg);
         }
 
         &::after {
@@ -1167,15 +1202,13 @@ $white-color: #FFFFFF;
     &__price {
         width: 55px;
         color: $text-color;
-        font-weight: 400;
-        font-size: 18px;
+        @include medium-font();
     }
 
     &__total-sum {
         display: block;
         color: $text-color;
-        font-weight: 400;
-        font-size: 18px;
+        @include medium-font();
         text-align: right;
         margin-bottom: 35px;
     }
@@ -1191,8 +1224,7 @@ $white-color: #FFFFFF;
         background: none;
         border: none;
         color: $main-color;
-        font-weight: 600;
-        font-size: 16px;
+        @include bold-small-font();
         cursor: pointer;
         padding: 0;
 
@@ -1200,6 +1232,181 @@ $white-color: #FFFFFF;
             color: $bright-color;
         }
     }
+}
+
+/* checkout */
+.main-content-checkout {
+    margin-bottom: 70px;
+}
+
+.checkout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-checkout {
+    width: calc(55% - 15px);
+    margin-right: 30px;
+}
+
+.order-checkout {
+    width: calc(45% - 15px);
+}
+
+.order {
+    background: #F7F8FA;
+    border-radius: 5px;
+    padding: 20px;
+
+    &__item {
+        display: flex;
+        margin-bottom: 15px;
+        @include small-font();
+        color: $text-color;
+    }
+
+    &__image {
+        width: 100px;
+        margin-right: 30px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__quantity-value {
+        display: block;
+        padding: 0;
+        border: none;
+        background: none;
+        width: 15px;
+        @include small-font();
+        color: #555555;
+        font-family: 'Rubik';
+        margin-bottom: 15px;
+    }
+
+    &__total-sum {
+        @include small-font();
+        color: $text-color;
+    }
+}
+/* sofa-barcelona */
+.main-content-sofa-barcelona {
+    margin-bottom: 70px;
+}
+
+.product-item {
+    &__top-content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+        padding-bottom: 20px;
+        border-bottom: 5px solid $main-color;
+    }
+
+    &__image-wrapper {
+        width: calc(50% - 50px);
+        margin-right: 100px;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__data {
+        width: calc(50% - 50px);
+    }
+
+    &__price {
+        display: block;
+        font-weight: 600;
+        font-size: 28px;
+        color: $main-color;
+        margin-bottom: 35px;
+    }
+
+    &__availability {
+        display: block;
+        font-weight: 600;
+        font-size: 24px;
+        color: $bright-color;
+        margin-bottom: 35px;
+    }
+
+    &__feature {
+        display: block;
+        @include medium-font();
+        color: $text-color;
+        margin-bottom: 15px;
+    }
+
+    &__fabric {
+        margin-bottom: 35px;
+    }
+
+    &__color-button {
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: 2px solid $text-color;
+        padding: 0;
+        margin-right: 15px;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid $bright-color;
+        }
+    }
+
+    &__text {
+        @include medium-font();
+        color: $text-color;
+        margin-bottom: 35px;
+    }
+
+    &__text-image {
+        display: block;
+        margin: 0 auto 35px;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &__title {
+        border: 2px solid $secondary-color;
+        padding: 15px;
+        background: $main-color;
+        font-weight: 500;
+        font-size: 18px;
+        color: $white-color;
+    }
+
+    &__property,
+    &__value {
+        font-size: 18px;
+        color: $text-color;
+        border: 2px solid $secondary-color;
+        padding: 15px;
+    }
+
+    &__property {
+        font-weight: 500;
+    }
+
+    &__value {
+        font-weight: 400;
+    }
+}
+
+.chosen {
+    border: 2px solid $main-color;
+}
+
+.chosen:hover {
+    border: 2px solid $main-color;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1212,6 +1419,17 @@ $white-color: #FFFFFF;
     .main-pages-menu {
         &__link {
             padding: 25px;
+        }
+    }
+
+    .product-item {
+        &__image-wrapper {
+            width: calc(50% - 15px);
+            margin-right: 30px;
+        }
+
+        &__data {
+            width: calc(50% - 15px);
         }
     }
 }
@@ -1227,13 +1445,22 @@ $white-color: #FFFFFF;
 
     .title-main,
     .title {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .product {
-
         &__column {
             width: 33.33%;
+        }
+    }
+
+    .product-item {
+
+        &__price,
+        &__availability,
+        &__fabric,
+        &__text {
+            margin-bottom: 25px;
         }
     }
 }
@@ -1291,6 +1518,35 @@ $white-color: #FFFFFF;
     .cart {
         width: 80%;
     }
+
+    .product-item {
+
+        &__price,
+        &__availability,
+        &__fabric,
+        &__text {
+            margin-bottom: 15px;
+        }
+
+        &__price {
+            font-size: 22px;
+        }
+
+        &__availability {
+            font-size: 18px;
+        }
+
+        &__feature, &__text {
+            font-size: 16px;
+        }        
+    }
+
+    .table {
+        &__property,
+        &__value {
+            font-size: 16px;
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1298,7 +1554,7 @@ $white-color: #FFFFFF;
         &__search {
             order: 0;
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         &__icons {
@@ -1349,7 +1605,7 @@ $white-color: #FFFFFF;
     }
 
     .categories-menu {
-        top: 256px;
+        top: 261px;
     }
 
     .banner {
@@ -1391,6 +1647,13 @@ $white-color: #FFFFFF;
     .vertical-menu {
         width: 70%;
     }
+
+    .order {
+        &__image {
+            width: 100px;
+            margin-right: 15px;
+        }
+    }
 }
 
 @media screen and (max-width: 650px) {
@@ -1402,6 +1665,7 @@ $white-color: #FFFFFF;
 
     .banner {
         background: #f2fbff;
+        padding: 20px;
     }
 
     .interior-image {
@@ -1421,7 +1685,6 @@ $white-color: #FFFFFF;
     }
 
     .subscription-form {
-
         &__input-email {
             width: 270px;
         }
@@ -1449,7 +1712,7 @@ $white-color: #FFFFFF;
     }
 
     .form-questions {
-        width: 100%;
+        width: 100%;        
     }
 
     .filter {
@@ -1478,6 +1741,42 @@ $white-color: #FFFFFF;
         }
 
     }
+
+    .form-checkout {
+        width: 100%;
+        margin-right: 0;
+        order: 1;
+    }
+
+    .order-checkout {
+        width: 100%;
+        order: 0;
+        margin-bottom: 35px;
+    }
+
+    .product-item {
+        &__image-wrapper {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 35px;
+        }
+
+        &__data {
+            width: 100%;
+        }
+
+        &__price,
+        &__availability,
+        &__fabric,
+        &__text {
+            margin-bottom: 35px;
+        }
+
+        &__text-image {
+            width: 100%;
+        }
+
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -1493,7 +1792,8 @@ $white-color: #FFFFFF;
         }
 
         &__icons {
-            width: 40%;
+            width: 45%;            
+            order: 2;
         }
 
         &__middle-content-inner {
@@ -1505,6 +1805,12 @@ $white-color: #FFFFFF;
         }
     }
 
+    .logo {
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
     .main-pages-menu {
         &__link {
             width: 248px;
@@ -1512,9 +1818,11 @@ $white-color: #FFFFFF;
     }
 
     .categories-menu {
+        top: 308px;
+
         &__link {
             width: 248px;
-        }
+        }       
     }
 
     .banner {
@@ -1557,8 +1865,7 @@ $white-color: #FFFFFF;
             font-size: 14px;
 
             &::placeholder {
-                font-weight: 400;
-                font-size: 16px;
+                @include small-font();
                 color: #B0B0B0;
                 font-family: 'Rubik';
             }

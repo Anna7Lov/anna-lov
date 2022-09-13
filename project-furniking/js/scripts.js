@@ -28,8 +28,8 @@ function handleSofaPointerClick() {
   sofaProduct.classList.toggle('active-product');
 }
 
-const tablePointer = document.querySelector('.table');
-const tableProduct = document.querySelector('.table-product');
+const tablePointer = document.querySelector('.small-table');
+const tableProduct = document.querySelector('.small-table-product');
 tablePointer.addEventListener('click', handleTablePointerClick);
 
 function handleTablePointerClick() {
