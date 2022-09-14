@@ -146,18 +146,17 @@ body {
     font-size: 18px;
     color: #7AC751;
     margin-bottom: 10px; }
+  .banner__title {
+    font-weight: 500;
+    font-size: 34px;
+    color: #2F2F2F;
+    margin-bottom: 20px; }
   .banner__offer {
     display: block;
     font-weight: 600;
     font-size: 20px;
     color: #555555;
     margin-bottom: 20px; }
-
-.title-main {
-  font-weight: 500;
-  font-size: 34px;
-  color: #2F2F2F;
-  margin-bottom: 20px; }
 
 .button-main {
   display: block;
@@ -587,21 +586,20 @@ body {
     .vertical-menu__link:hover {
       color: #FF7518; }
 
-/* categories */
-.main-content-categories__title {
-  text-align: center;
-  margin-bottom: 35px; }
-
 /* contacts */
-.main-content-contacts__title {
-  text-align: center;
-  margin-bottom: 35px; }
 .main-content-contacts__text {
   font-weight: 400;
   font-size: 16px;
   color: #555555;
   text-align: center;
   margin-bottom: 70px; }
+
+.title-main {
+  font-weight: 500;
+  font-size: 34px;
+  color: #2F2F2F;
+  text-align: center;
+  margin-bottom: 35px; }
 
 .contact {
   display: flex;
@@ -789,10 +787,6 @@ body {
     background: #FF7518; }
 
 /* cart */
-.main-content-cart__title {
-  text-align: center;
-  margin-bottom: 35px; }
-
 .cart {
   position: relative;
   width: 55%;
@@ -966,6 +960,8 @@ body {
 .main-content-sofa-barcelona {
   margin-bottom: 70px; }
 
+.product-item__title {
+  text-align: left; }
 .product-item__top-content {
   display: flex;
   flex-wrap: wrap;
