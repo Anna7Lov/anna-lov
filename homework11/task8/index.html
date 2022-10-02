@@ -1,0 +1,16 @@
+<!-- 1. Об'єктом якого класу є document?
+Об'єкт класу HTMLDocument. Можно перевірити, наприклад, через alert(document), що виведе [object HTMLDocument].   
+
+2. Яке місце він посідає у DOM-ієрархії?
+Відслідкувати ієрархію можна за допомогою console.dir(document). Там вказано prototype.
+HTMLDocument
+Document
+Node
+EventTarget
+...
+
+3. Чи успадковує він від Node чи від Element, чи може від HTMLElement?
+console.log(document instanceof Node); // true
+console.log(document instanceof Element); // false
+console.log(document instanceof HTMLElement); // false
+Тобто з переліку успадковує від Node. -->

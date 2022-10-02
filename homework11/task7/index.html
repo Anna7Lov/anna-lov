@@ -1,0 +1,17 @@
+<!-- Код виведе BODY.
+body.tagName === 'BODY'.
+Вмістом <body> робимо коментар.
+Цей коментар є body.firstChild.
+data елемента-коментарю - це його вміст усередині символів, тобто 'BODY'. -->
+
+<html>
+
+<body>
+    <script>
+        let body = document.body;
+        body.innerHTML = "<!--" + body.tagName + "-->";
+        alert(body.firstChild.data);
+    </script>
+</body>
+
+</html>
