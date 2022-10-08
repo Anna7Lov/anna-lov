@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #field {
+            position: relative;
+            width: 200px;
+            height: 150px;
+            border: 10px solid black;
+            background-color: #00FF00;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        #ball {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            transition: 2s;
+        }
+    </style>
+</head>
+
+<body style="height:2000px">
+
+    Натисніть поле для переміщення м'яча.
+    <br> М'яч не повинен виходити за межі поля.
+    <div id="field">
+        <img src="https://ru.js.cx/clipart/ball.svg" id="ball">
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    </div>
+
+    <script>
+        const field = document.querySelector('#field');
+        const ball = document.querySelector('#ball');
+
+        field.addEventListener('click', (e) => {
+            const width = field.clientWidth;
+            const height = field.clientHeight;
+            const left = field.offsetLeft + field.clientLeft;
+            const top = field.offsetTop + field.clientTop;
+            let x = e.pageX - left - ball.offsetWidth / 2;
+            let y = e.pageY - top - ball.offsetHeight / 2;
+
+            if (y < 0) {
+                y = 0;
+            }
+            if (x < 0) {
+                x = 0;
+            }
+            if (y > height - ball.offsetHeight) {
+                y = height - ball.offsetHeight;
+            }
+            if (x > width - ball.offsetWidth) {
+                x = width - ball.offsetWidth;
+            }
+
+            ball.style.top = y + 'px';
+            ball.style.left = x + 'px';
+        })
+    </script>
+
+</body>
+
+</html>

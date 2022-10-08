@@ -1,0 +1,28 @@
+.menu {
+    max-width: 1300px;
+    margin: 20px auto;
+}
+
+.title {
+    width: 210px;
+    font-weight: bold;
+    margin-bottom: 10px;    
+    cursor: pointer;
+}
+
+.title::before {
+    content: '▶ ';    
+}
+
+.opened .title::before {
+    content: '▼ ';  
+}
+
+.list {
+    padding-left: 18px;
+    display: none;
+}
+
+.opened .list {
+    display: block;
+}
