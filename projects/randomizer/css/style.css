@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(90deg, #ecb4e5, #cfecd0);
+}
+
+.randomizer-page-content {
+    max-width: 1300px;
+    margin: 15px auto 0;
+}
+
+.projects-link {
+    display: block;
+    width: 175px;
+    padding: 10px;
+    text-decoration: none;
+    border-top: 2px solid #ca67a9;
+    border-bottom: 2px solid #ca67a9;
+    color: #601fa1;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.projects-link:hover {
+    filter: brightness(120%);
+}
+
+.title {
+    color: #120d14;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.randomizer {
+    width: 300px;
+    border: 2px solid #120d14;
+    box-shadow: 3px 3px 5px 0px rgb(106 106 106);
+    border-radius: 20px;
+    background: #2e2e39;
+    padding: 15px;
+    margin: 0 auto 20px;
+    font-size: 18px;
+}
+
+.content {
+    margin-bottom: 15px;
+}
+
+.label {
+    display: inline-block;
+    width: 95px;
+    color: white;
+}
+
+#min,
+#max,
+#quantity {
+    font-size: 18px;
+    width: 166px;
+    border-radius: 10px;
+    border: 2px solid #120d14;
+    padding: 3px 10px;
+    color: #120d14;
+}
+
+#unique {
+    margin: 1px;
+}
+
+.button {
+    display: block;
+    width: 150px;
+    background: #ca67a9;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid #120d14;
+    padding: 10px;
+    color: white;
+    margin: 0 auto 15px;
+}
+
+.button:hover {
+    filter: brightness(120%);
+}
+
+.button:active {
+    background: #601fa1;
+}
+
+.result-title {
+    border-top: 2px solid #ca67a9;
+    border-bottom: 2px solid #ca67a9;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.list {
+    padding-left: 22px;
+    list-style-type: "💎";
+    color: white;
+    margin-bottom: 15px;
+}
+
+.item {
+    margin-bottom: 5px;
+    padding-left: 5px;
+}
+
+.date {
+    color: white;
+    font-size: 14px;
+}

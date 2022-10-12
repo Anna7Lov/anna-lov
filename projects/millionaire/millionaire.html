@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millionaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="millionaire-page-content">
+        <div class="start-content">
+            <a class="projects-link" href="../index.html">Go to All Projects</a>
+            <div class="image-wrapper">
+                <img class="image-millionaire" src="./image/millionaire.png" alt="Who wants to be a Miillionaire logo">
+            </div>
+            <button class="start-button">Почати гру</button>
+        </div>
+
+        <div class="game-content">
+            <ol class="level-list" reversed>
+                <li class="level-list__item">1 000 000$</li>
+                <li class="level-list__item">500 000$</li>
+                <li class="level-list__item">250 000$</li>
+                <li class="level-list__item">125 000$</li>
+                <li class="level-list__item">64 000$</li>
+                <li class="level-list__item">32 000$</li>
+                <li class="level-list__item">16 000$</li>
+                <li class="level-list__item">8 000$</li>
+                <li class="level-list__item">4 000$</li>
+                <li class="level-list__item">2 000$</li>
+                <li class="level-list__item">1 000$</li>
+                <li class="level-list__item">500$</li>
+                <li class="level-list__item">300$</li>
+                <li class="level-list__item">200$</li>
+                <li class="level-list__item">100$</li>
+            </ol>
+            <div class="playing-field">
+                <img class="image-millionaire-small" src="./image/millionaire.png"
+                    alt="Who wants to be a Miillionaire logo">
+                <div class="hints">
+                    <button class="hints__item fifty-fifty">50:50</button>
+                    <button class="hints__item call-friend">☎</button>
+                </div>
+                <div class="questions">
+                    <h2 class="question"></h2>
+                    <ul class="answer-options">
+                        <li class="answer-options__item option-a"></li>
+                        <li class="answer-options__item option-b"></li>
+                        <li class="answer-options__item option-c"></li>
+                        <li class="answer-options__item option-d"></li>
+                    </ul>
+                </div>
+                <div class="friend">
+                    <p class="friend__answer"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-over">
+            <h3 class="game-over__title">Гру закінчено!</h3>
+            <p class="game-over__text"></p>
+            <p class="game-over__restart">Зіграємо ще?</p>
+            <button class="game-over__button game-over__button-yes">Так</button>
+            <button class="game-over__button game-over__button-no">Ні</button>
+        </div>
+    </div>
+
+    <script defer src="js/questions.js"></script>
+    <script defer src="js/scripts.js"></script>
+</body>
+
+</html>

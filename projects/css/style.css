@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(90deg, #ecb4e5, #cfecd0);    
+}
+
+.main-page-content {     
+    max-width: 1300px;
+    margin: 50px auto 0;
+}
+
+.title {
+    color: #120d14;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.project {
+    display: block;
+    position: relative;
+    width: 275px;
+    padding: 100px 20px 20px;
+    text-decoration: none;
+    background: white;
+    border-radius: 20px;
+    border: 2px solid #120d14;
+    color: #ca67a9;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;    
+    box-shadow: 3px 3px 5px 0px rgb(106 106 106);    
+}
+
+.project:not(:last-child) {
+    margin-right: 30px;
+}
+
+.project:first-child {
+    align-self: flex-start;
+}
+
+.project:last-child {
+    align-self: flex-end;
+}
+
+.project::before {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 32px);
+    content: "";
+    width: 64px;
+    height: 64px;
+}
+
+.project:hover {
+    filter: brightness(120%);
+}
+
+.project:active {
+    background: #601fa1;
+}
+
+.millionaire::before {
+    background: url(../image/millionaire-icon.png) no-repeat;
+}
+
+.calculator::before {
+    background: url(../image/calculator-icon.png) no-repeat;
+}
+
+.randomizer::before {
+    background: url(../image/randomizer-icon.png) no-repeat;
+}
